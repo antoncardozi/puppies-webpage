@@ -1,0 +1,48 @@
+/* Custom styles for Puppies Webpage */
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base Body Style */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom transitions and states */
+.accordion-content {
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-item.active .accordion-header {
+    background-color: #FFF7ED; /* orange-50 */
+}
+
+/* Card hover lift effect */
+.group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+}
+
+/* Custom rounded corners for cards */
+.rounded-2xl {
+    border-radius: 1.5rem;
+}
+
+/* Tap targets for mobile */
+@media (max-width: 768px) {
+    .p-2 {
+        padding: 0.75rem;
+    }
+}
+
+/* Typography Overrides if needed beyond Tailwind */
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
